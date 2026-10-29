@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PROMOCIONES612 - Lucha Libre</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .seccion { display: none; }
+    .seccion.activa { display: block; }
+  </style>
+</head>
+<script>
+let lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+  let header = document.querySelector("header");
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // desplazando hacia abajo
+    header.style.top = "-80px"; // lo escondes
+  } else {
+    // hacia arriba
+    header.style.top = "0";
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
+
+</script>
+
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="#" onclick="mostrarSeccion('inicio')">
+      <img src="img/logo.png" alt="PROMOCIONES612" class="logo-header">
+    </a>
+    <nav>
+      <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+      <a href="#" onclick="mostrarSeccion('eventos')">Eventos</a>
+      <a href="#" onclick="mostrarSeccion('roster')">Roster</a>
+      <a href="#" onclick="mostrarSeccion('escuela')">Escuela</a>
+      <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- INICIO -->
+  <section id="inicio" class="seccion activa inicio-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">¡Bienvenido a <span>PROMOCIONES612OFICIAL.COM</span>!</h1>
+    <p class="hero-text">
+      Aquí encontrarás las últimas noticias, próximos eventos y todo lo relacionado 
+      con la promotora número 1 de Baja California Sur. 
+    </p>
+    <p class="hero-subtext">⚡ Desplázate con confianza y disfruta la experiencia ⚡</p>
+    
+    <a href="#" onclick="mostrarSeccion('eventos')" class="btn btn-principal">Ver Próximos Eventos</a>
+    <a href="#" onclick="mostrarSeccion('roster')" class="btn btn-secundario">Conoce el Roster</a>
+  </div>
+</section>
+
+
+  <!-- EVENTOS -->
+
+  <section id="eventos" class="seccion">
+    <div class="evento">
+      <h2>🦇 Gravity en Ciudad Constitución</h2>
+      <p>📍 Cancha Fanmanía – 19 de Septiembre</p>
+      <img src="img/eventos/gvrcc.jpeg" alt="Flyer Gravity" class="flyer">
+      <button class="ver-detalles-btn" onclick="toggleDetalles('detalles-gravity2')">Ver detalles</button>
+      <div id="detalles-gravity2" class="detalles-evento">
+          <p><strong>¡Promociones 612 lo hace posible! Y en su misión de llevar la mejor lucha libre hacia todo el estado, llega a ciudad constitución con una verdadera noche mexicana, donde el protagonista será la estrella internacional, directamente desde AEW, el astronauta: Gravity, quien por primera vez visita el estado de Baja California Sur. Ven y disfruta de este evento patrio lleno de traidción y emociones, donde los mejores luchadores del estado se enfrentarán a lo mejor de la tierra de Guadalajara, ya que el ídolo: El Enviado vendrá nuevamente de visita junto con sus eternos rivales, Reycko y Mr Raggae, miembros de la Cli-k y por primera vez llega la ciudad: Aliado De Dios, compra tus boletos y no te quedes fuera de este gran evento.</p>
+        <p><strong>Luchadores confirmados:</strong> Gravity, El Enviado, Aliado de Dios, Ninja Dragon, Reycko,  Mr Raggaeo, Soberbio, La Mole, Halcon Fire, Joker Clown, Chango Style</p>
+        <p><strong>🎫 Primera fila:</strong> $450</p>
+        <p><strong>🎫 Segunda Fila:</strong> $400</p>
+        <p><strong>🎫 Ringside:</strong> $300</p>
+        <p><strong>🎫 Gradas:</strong> $200</p>
+        
+        <a href="https://wa.me/526681645434?text=Hola%20quiero%20comprar%20boletos%20para%20Gravity%20en%20Ciudad%20Constitución" 
+   class="boton-boletos" target="_blank">
+   🎟️ Comprar Boletos
+</a>
+        
+      </div>
+    </div>
+<div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <h3 id="boleto-tipo"></h3>
+      <p id="boleto-precio"></p>
+      <form id="form-compra">
+        <label>Cantidad:</label>
+        <input type="number" id="cantidad" min="1" max="10" value="1">
+        <button type="submit">Pagar con tarjeta</button>
+      </form>
+    </div>
+  </div>
+  
+    <div class="evento">
+      <h2>🦇 Gravity en La Paz</h2>
+      <p>📍 Sindicato de Burócratas – 20 de Septiembre</p>
+      <img src="img/eventos/grvlpaz.jpeg" alt="Flyer Gravity" class="flyer">
+      <button class="ver-detalles-btn" onclick="toggleDetalles('detalles-gravity')">Ver detalles</button>
+      <div id="detalles-gravity" class="detalles-evento">
+          <p><strong>La Paz B.C.S. Es territorio 612 y con este evento lo sigue demostrando, continuando con la gran gira del estado, la casa de 612 recibirá de visita a la estrella internacional, directamente desde AEW, el astronauta: Gravity, quien pisa por primera vez en su carrera las tierras paceñas. Sin embargo, no viene solo, lo mejor del territorio independiente hace presencia representados por Aliado De Dios (quien será su primera vez en la ciudad) y los ya conocidos y queridos por la aficion paceña, El Enviado viene a rendir cuentas con sus eternos rivales Reycko y Mr  Reggae miembros de la Cli-k. Y nuestro talento local no se queda atrás, pues veremos en acción a los siempre queridos Ninja Dragon, Joker Clown, La mole y más. No te pierdas este gran evento y celebra el mes patrio, el mes de la lucha libre con promociónnes 612, tendremos una noche de kermes para que disfrutes con tus amigos y familiares.</p>
+        <p><strong>Luchadores confirmados:</strong> Gravity, El Enviado, Aliado de Dios, Ninja Dragon, Reycko, Mr Raggae, Joker Clown, Soberbio, Chango Styles, La Mole, Halcon Fire</p>
+       <p><strong>🎫 Primera fila:</strong> $450</p>
+        <p><strong>🎫 Segunda Fila:</strong> $400</p>
+        <p><strong>🎫 Ringside:</strong> $300</p>
+        <p><strong>🎫 Gradas:</strong> $200</p>
+        <a href="https://wa.me/526681645434?text=Hola%20quiero%20comprar%20boletos%20para%20Gravity%20en%20La%20Paz" 
+   class="boton-boletos" target="_blank">
+   🎟️ Comprar Boletos
+</a>
+
+        
+      </div>
+    </div>
+
+    
+    <div class="evento">
+      <h2>🦇 Noche de Muertos</h2>
+      <p>📍 Cancha Fanmania – 31 de Octubre</p>
+      <img src="img/eventos/krzcc.jpeg" alt="Flyer Noche de Muertos" class="flyer">
+      <button class="ver-detalles-btn" onclick="toggleDetalles('detalles-muertos2')">Ver detalles</button>
+      <div id="detalles-muertos2" class="detalles-evento">
+         <p><strong>Promociones 612 mantiene vivas las tradiciones mexicanas y el día de celebrar a nuestros santos difuntos no sería la excepción, por lo que te invitamos a este gran evento con temática de día de muertos, el cual continúa con la gran gira de promociones 612 por todo el estado, la primera parada como ya es costumbre, Ciudad Constitución contará con la presencia protagónica, del heredero del gran legado de la Parka: ¡Karis La Momia Jr!, quien visita por primera vez Baja California Sur, pero no viene solo, directamente desde Japón, de la empresa NOAH, Kalibus y del circuito independiente, Vikingo Jr hará aparición. Las estrellas locales también vendrán a derrochar todo su talento para que los disfrutes como siempre, no te quedes fuera, aparta tus boletos y por cierto, llévate tu disfraz que habrá sorpresas.</p>
+        <p><strong>Luchadores confirmados:</strong> Karis la Momia Jr, Kalibus, Vikingo Jr, El Enviado, Reycko, Mr Reggae, Ninja Dragon, Joker Clown, La Mole, Soberbio, Chango Styles, Halcon Fire</p>
+        <p><strong>🎫 Primera fila:</strong> $450</p>
+        <p><strong>🎫 Segunda Fila:</strong> $400</p>
+        <p><strong>🎫 Ringside:</strong> $300</p>
+        <p><strong>🎫 Gradas:</strong> $200</p>
+        <a href="https://wa.me/526681645434?text=Hola%20quiero%20comprar%20boletos%20para%20Karis%20en%20Ciudad%20Constitución" 
+   class="boton-boletos" target="_blank">
+   🎟️ Comprar Boletos
+</a>
+
+      </div>
+    </div>
+
+    <div class="evento">
+      <h2>🦇 Noche de Muertos</h2>
+      <p>📍 Sindicato de Burócratas – 01 de Noviembre</p>
+      <img src="img/eventos/karlpz.jpeg" alt="Flyer Noche de Muertos" class="flyer">
+      <button class="ver-detalles-btn" onclick="toggleDetalles('detalles-muertos')">Ver detalles</button>
+      <div id="detalles-muertos" class="detalles-evento"> 
+      <p><strong>La Paz BCS siempre celebra sus tradiciones y con Promociones 612, esto solo aumenta, no te pierdas este gran evento temático de día de muertos, donde la lucha libre rendirá el mejor tributo y en esta ocasión la tierra paceña contará con una visita de ultratumba, el heredero del gran legado de la Parka: Karis la Momia Jr visita el puerto por primera vez en su carrera, en una noche espectacular donde grandes nombres también hacen aparición, directamente de la empresa japonesa NOAH, llega Kalibus y desde el circuito independiente: Vikingo Jr viene a marcar historia en la tierra más caliente. Nuestro talento local tendrá que medirse y demostrar porque tienen el derecho de ser expuestos en los mejores escenarios del país, los ya conocidos y queridos Ninja Dragon, La Mole, Joker Cown y mas estarán representando a su ciudad demostrando el poderío paceño. No te puedes perder este gran evento, donde habrá muchas sorpresas y deberás traer tu mejor disfraz para poder ganar un regalito que te encantará.</p>
+        <p><strong>Luchadores confirmados:</strong> Karis la Momia JR, Kalibus, Vikingo JR, El Enviado, Reycko, Mr Reggae, Ninja Dragon, Joker Clown, La Mole, Soberbio, Chango Styles, Halcon Fire</p>
+        <p><strong>🎫 Primera fila:</strong> $450</p>
+        <p><strong>🎫 Segunda Fila:</strong> $400</p>
+        <p><strong>🎫 Ringside:</strong> $300</p>
+        <p><strong>🎫 Gradas:</strong> $200</p>
+      <a href="https://wa.me/526681645434?text=Hola%20quiero%20comprar%20boletos%20para%20Karis%20en%20La20Paz" 
+   class="boton-boletos" target="_blank">
+   🎟️ Comprar Boletos
+</a>
+
+      </div>
+    </div>
+
+    <div class="evento">
+      <h2>⚡ Noche Mística</h2>
+      <p>📍 Sindicato de Burócratas – 06 de Diciembre</p>
+      <img src="img/eventos/mislpz.jpg" alt="Flyer Noche Mística" class="flyer">
+      <button class="ver-detalles-btn" onclick="toggleDetalles('detalles-mistica')">Ver detalles</button>
+      <div id="detalles-mistica" class="detalles-evento">
+          <p><strong>¡PROMOCIONES 612 LO HACE POSIBLE! y en nuestro cierre de temporada contaremos con la presencia del último boom de la lucha libre, el Rey de Plata y Oro: Místico visita el estado de Baja California Sur en la denominada "Lucha de Reyes" reviviendo uno de los clásicos del Consejo Mundial de Lucha Libre: Místico vs Bárbaro Cavernario, en una de las funciones más esperadas por toda la afición sudcaliforniana. Además, nosotros te escuchamos y sabemos quienes han sido tus luchadores favoritos alrededor del año por lo que en el gran evento final de Promociones 612 del 2025, todos los luchadores que recibieron el grito de “Esto es Lucha” estarán presentes, El Enviado, La Cli-K, Santi Bentacourt, Kaiuju estarán presentes junto con nuestro gran talento local que vendrán a marcar el poderío paceño para darle a toda nuestra familia un bonito cierre de año. Recuerda que hay cupo limitado por lo que adquiere tus boletos en esta preventa.</p>
+        <p><strong>Luchadores confirmados:</strong> Místico, Bárbaro Cavernario, El Enviado, Reycko, Santi Bentacourt, Kaiuju, Mr Raggae, Ninja Dragon, Joker Clown, La Mole, Soberbio</p>
+        <p><strong>🎫 Primera fila:</strong> $1,200</p>
+        <p><strong>🎫 Segunda Fila:</strong> $900</p>
+        <p><strong>🎫 Terca Fila:</strong> $800</p>
+        <p><strong>🎫 Cuarta Fila:</strong> $700</p>
+        <p><strong>🎫 Ringside:</strong> $600</p>
+        <p><strong>🎫 Gradas:</strong> $500</p>
+       <a href="https://wa.me/526681645434?text=Hola%20quiero%20comprar%20boletos%20para%20Mistico%20en%20La%20Paz" 
+   class="boton-boletos" target="_blank">
+   🎟️ Comprar Boletos
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ROSTER -->
+  <section id="roster" class="seccion roster">
+    <h2>💥 Roster Oficial PROMOCIONES612</h2>
+    <h2>Luchadores</h2>
+    <div class="roster-grid ">
+      
+      <div class="luchador" onclick="mostrarModal('Ninja Dragon', 'img/roster/Ninja.JPG', 'Origen: Ciudad Obregón, Sonora','Fecha de nacimiento: 29 de marzo de 1993','Debut profesional: 8 de noviembre de 2008','Nombre anterior: Steel Dragon','Apodo: El Amo del Fuego','Campeonatos: Campeonato de Parejas MWL','Maestros: El Murciélago, Dhariuz, Súper Sonic','Facciones: Samurai Brothers (junto a Hijo de Penta Black)','Ninja Dragon es un luchador versátil, capaz de adaptarse a diversos estilos sobre el cuadrilátero. Domina el arte del llaveo y contrallaveo, combina movimientos aéreos con rudeza clásica, y no teme adentrarse en terrenos extremos cuando la ocasión lo exige. Su estilo se caracteriza por los castigos de alto impacto, con una ejecución precisa y espectacular.','Apodado El Amo del Fuego, este sobrenombre no es solo simbólico: en cada presentación, hace su entrada portando una antorcha con la que escupe fuego, reforzando su imagen mitológica y su conexión con los elementos. Este ritual ha convertido sus apariciones en una experiencia inolvidable para el público.',' El nombre de Ninja Dragon surgió tras perder su anterior identidad como Steel Dragon en una lucha ante Dhariuz en la MWL en 2019. Lejos de marcar una caída, este cambio significó una evolución en su carrera.','Actualmente, Ninja Dragon es una figura clave en Promociones 612, donde se ha consolidado como un referente del circuito luchístico en Baja California Sur. Se ha convertido en el rival a vencer para figuras nacionales e internacionales, destacando como un joven veterano con gran proyección y respeto en el medio.')">
+        <img src="img/roster/Ninja.JPG" alt="Ninja Dragon">
+        <h3>Ninja Dragon</h3>
+        <p>• El Amo del Fuego</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Joker Clown', 'img/roster/Joker.JPG', 'La lucha libre tiene varios estilos; extrema, excéntrica, del barrio. Pero el Underground es representado solo por uno, el más chico de una antigua tercia que se fue abriendo paso, un luchador donde no le importa si lucha en la primera o en la final, lo importante es dar una buena función y desquitar el boleto.',' No importa si la lucha es extrema, a ras de lona, aérea, de eso se trata el under, observar, adaptarse, sobrevivir y como en el póker,el Joker es el mejor comodín. ','Les presento a ustedes; damas, caballeros, niños, niñas o con lo que chingados se identifiquen, al mundialmente desconocido, al del estilo underground !!!JOKERCLOWN¡¡¡')">
+        <img src="img/roster/Joker.JPG" alt="Joker Clown">
+        <h3>Joker Clown</h3>
+        <p>• El del estilo underground</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Jet Lee', 'img/roster/jetlee.jpeg','Soy originario de Tlaxcala capital, con 25 años como luchador con máscara, también soy un gladiador con vestimenta de tipo oriental con un estilo universal.',' Ni técnico ni rudo, más conocido como  El Artemarcialista de Fama Internacional, su Majestad: Jet Lee.',' Con una lucha a ras de lona, con lucha aérea y mezclando las artes marciales con la lucha libre profesional, para estar al gusto del público de pequeños y grandes.',' Con giras en la mayor parte de la república mexicana, Centrosudamerica, parte del Caribe, Europa y Japón.',' He trabajado para las dos más grandes empresas en México, ahora en la actualidad solo por el circuito independiente... ⛩️☯️🥋🈯🐉🇨🇳🇲🇽.')">
+        <img src="img/roster/jetlee.jpeg" alt="Jet Lee">
+        <h3>Jet Lee</h3>
+        <p>• El Artemarcialista de fama internacional</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Chuy Molina', 'img/roster/chuy.jpg', 'Bando: Rudo y Técnico','Movimiento favorito: la bomba y lariato', 'Debut: 30 junio 2014', 'Originario: Guaymas, Sonora', 'Campeonatos: actualmente Campeón Universal Aztlan L.L, Campeón TCW pesos completos 🇺🇸')">
+        <img src="img/roster/chuy.jpg" alt="Chuy Molina">
+        <h3>Chuy Molina</h3>
+        <p>• El Recio del Puerto</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('La Mole', 'img/roster/mole.jpg', 'Escuela: Técnica y Ruda ','Bando: Rudo', 'Debut: 22.11.2022', 'Maestros: Guason, Vengador Águila, El Infernal (RIP), Alex Dinamo.',' Rivalidades actuales: Angelix, Jeet  Lee, Jocker Clown, Ninja Dragon.','Ha participado: en triangular y cuadrangular de mascaras y cabellera.','Logros: Cabellera de Angelix, segundo lugar torneo de pareja con Jesús Molina.','integrante de: DEMOLICIÓN INFERNAL, primera facción en La Paz, B. C. S.')">
+        <img src="img/roster/mole.jpg" alt="La Mole">
+        <h3>La Mole</h3>
+        <p>• Rebelde de los 4 fantásticos</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('El Enviado', 'img/roster/Enviado.JPG', 'Debutó hace 13 años un 24 de noviembre. Originario de Guadalajara Jalisco, El Enviado es uno de los luchadores mas idolatrados por toda la afición Sudcaliforniana, siendo siempre pedido en las funciones de Promociones612.','Con grandes logros en máscaras, cabelleras y campeonatos, destacando ser el primer campeón Supremo de la Paz B.C.S','Ha participado en grandes empresas como AAA, The Crash y todo el circuito independiente de México siempre siendo protagonista de la lucha más destacada de la noche. ')">
+        <img src="img/roster/Enviado.JPG" alt="El Enviado">
+        <h3>El Enviado</h3>
+        <p>• Rey del Aire</p>
+      </div>
+       
+    </div>
+    
+  
+        <h2>Staff </h2>
+         <div class="staff-section">
+          <button id="toggleStaffBtn" class="btn btn-secundario">👥 Ver Staff</button>
+        <div id="staffContainer" class="roster-grid" style="display:none;">
+          <div class="luchador" onclick="mostrarModal('Axel Evans', 'img/roster/axel.jpg', 'Me llamaré el Padrino.',' Luchador, promotor, referee y Presidente de Lucha Reyes Asociación.',' Debut como luchador:  Abril del 2015 con el nombre de: El Muerte, posteriormente creé a la promotora MWL, siendo uno de los promotores de la nueva generación. ','Perdí mi máscara por iniciativa propia para entrar en el concurso para Rey del Carnaval 2017, mismo año cambió mi nombre a “Axel Evans”. ','En el 2019 fue mi retiro como luchador para convertirme en referee en un evento en San José, octubre 19.',' Orgulloso por ser el único promotor con tener 4 títulos vigentes y avalados por la comisión, como son los campeonatos de parejas, campeonato supremo, campeonato extremo y el campeonato de peso pesado.',' fui impulsor de nuevos valores y creador de dos escuelas de lucha libre. En los últimos años me dediqué apoyar a ciertos promotores a hacer eventos y por lo último soy referee exclusivo y oficial de promociones 612')">
+        <img src="img/roster/axel.jpg" alt="Axel Evans">
+        <h3>Axel Evans</h3>
+        <p>Referee</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Nahy Sandoval', 'img/roster/nahy.jpeg',  'Con trabajos destacados en eventos deportivos, sociales y culturales, Nahy Sandoval ha construido un estilo auténtico dentro de la lucha libre, capturando la emoción del ring, la energía del público y la esencia de cada personaje. Combina talento, compromiso y una visión que logra que cada función, cada momento y cada luchador quede en la memoria colectiva, inspirando, impulsando y preservando la historia de la lucha libre sudcaliforniana.','Su lente ha capturado no solo el crecimiento de Promociones612 sino también eventos de gran relevancia como Miss Universo México 2024 en Cancún, el Torneo Nacional Interfiliales 2025 en Aguascalientes y una gira con DTU Lucha Profesional Mexicana por Tampico, Córdoba e Iguala, llevando su mirada fotográfica a nuevos estilos, públicos y escenarios.','Conoce más de su trabajo en Nahy Sandoval - Fotografía','Contáctala al (612) 197 2238')">
+        <img src="img/roster/nahy.jpeg" alt="Nahy Sandoval">
+        <h3>Nahy Sandoval</h3>
+        <p>Fotógrafa Oficial</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Yessy Rodman', 'img/roster/Yessy.jpeg', 'Yessy RodMan es una cantante versátil y animadora de eventos sociales nacida en la Paz, Baja California Sur. ','Descubrió su gusto por la música desde muy pequeña cantando para su familia; en el año 2020 empezó a subir videos musicales a sus redes sociales dando a conocer su talento musical y a conectar con el público; abriéndose paso para realizar trabajos en el ámbito del canto presentándose en diversos eventos especiales tales como eventos deportivos, festivales navideños, en colonias populares y festivales gastronómicos en restaurantes captando así la atención del público en general.',' Se ha presentado en eventos culturales como lo son la Expo mujer rural 2024 en La Paz BCS, en el festival de los artesanos 2024 que tuvo lugar en el poblado el triunfo BCS, en el presente se dedica a amenizar eventos especiales tales como funciones de boxeo, de lucha libre buscando así estar entre el gusto del público e interactuar con las familias sudcalifornianas a través de su música y su voz')">
+        <img src="img/roster/Yessy.jpeg" alt="Yessy Rodman">
+        <h3>Yessy Rodman</h3>
+        <p>Cantante</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Kike', 'img/roster/kike.jpeg',  'Entre las diversas tareas que Enrique apoya, el es entrenador de boxeo, deportista de alto rendimiento, el apoyo de usted y mio en coordinación de eventos.')">
+        <img src="img/roster/kike.jpeg" alt="Kike">
+        <h3>Kike</h3>
+        <p>AKA: Blue Demon</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Cesar Galindo', 'img/roster/cesar.jpeg', 'Hola, yo me llamo: César Iván Galindo Romero. Soy originario de la ciudad de México, tengo 15 años viviendo en la ciudad de la paz BCS. Soy oficial yesero que es trabajo dentro de la construcción, entonces hace 15 años conocí a mi amigo patrón: El ingeniero Jesús Antonio Sánchez Félix, el creador de la promotora 612 y desde hace 3 años que inició en su aventura de volver a renacer lo que por muchos años ya se había perdido: El ambiente de lucha libre. ','Hoy formo parte del staff de promociones 612.')">
+        <img src="img/roster/cesar.jpeg" alt="Cesar">
+        <h3>Cesar Galindo</h3>
+        <p>Staff</p>
+      </div>
+
+      <div class="staff" onclick="mostrarModal('Guadalupe Soto', 'img/roster/guadalupe.jpeg', 'Hola, mi nombre es Guadalupe Elizabeth Soto Ojeda. Soy originaria de la ciudad de La Paz, B.C.S.',' Actualmente soy encargada de una de las papelerías más reconocidas del estado.',' Conozco desde hace 10 años al Ingeniero Sánchez Félix, creador de la promotora 612. Hace 3 años inició este proyecto para traer nuevamente la lucha libre a nuestro estado, y desde hace un año y medio formo parte del staff y de la familia 612.',' Mi labor es administrar la venta en barra y encargarme de los pagos al equipo de Promociones 612. ','Me siento muy feliz de formar parte de esta gran familia.')">
+        <img src="img/roster/guadalupe.jpeg" alt="Guadalpe soto">
+        <h3>Guadalupe Soto</h3>
+        <p>Staff</p>
+      </div>
+
+      <div class="luchador" onclick="mostrarModal('Romina Zaragoza', 'img/roster/romina.jpeg', 'Hola, mi nombre es Romina Maridel Zaragoza Soto . Soy originaria de la ciudad de La Paz, B.C.S.',' Actualmente soy estudiante de preparatoria, curso la especialidad de administración de empresas. ','Conozco desde hace más 6 años al Ing. Jesús Sánchez Félix, creador de la promotora 612. Hace 3 años inició este proyecto para traer nuevamente la lucha libre a nuestro estado, y desde hace un año y medio formo parte del staff y familia Promociones 612.',' Me siento muy feliz de formar parte de esta gran familia. Por qué solo promociones 612 lo hace posible')">
+        <img src="img/roster/romina.jpeg" alt="Romina Zaragoza">
+        <h3>Romina Zaragoza</h3>
+        <p>Staff</p>
+      </div>
+      </div>
+
+</div>
+       
+        </section>
+
+  <!-- ESCUELA -->
+  <section id="escuela" class="seccion">
+    <h2>📚 Escuela de Lucha Libre PROMOCIONES612</h2>
+    <div class="escuela-grid">
+      <img src="img/escuela/escuela1.jpeg" alt="Clase de lucha libre">
+      <img src="img/escuela/escuela2.jpeg" alt="Entrenamiento en ring">
+      <img src="img/escuela/escuela3.jpeg" alt="Luchadores en formación">
+       <img src="img/escuela/escuela4.jpeg" alt="Luchadores en formación">
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="seccion">
+    <footer>
+  <footer>
+  <p>
+    <a href="https://www.instagram.com/promociones612oficial?igsh=c3EwZDFnMDNmNGFn" target="_blank">
+      <i class="fab fa-instagram"></i> @promociones612oficial
+    </a>
+  </p>
+  <p>
+    <a href="https://www.facebook.com/share/16x75WYi5e/?mibextid=wwXIfr" target="_blank">
+      <i class="fab fa-facebook"></i> promociones612oficial
+    </a>
+  </p>
+  <p>
+    <a href="https://wa.me/526681645434" target="_blank">
+      <i class="fab fa-whatsapp"></i> (668) 164 5434
+    </a>
+  </p>
+  <p>© 2025 PROMOCIONES612OFICIAL</p>
+</footer>
+
+</footer>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal-roster" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <img id="modal-img" src="" alt="" class="modal-img">
+      <h2 id="modal-nombre"></h2>
+      <p id="modal-info"></p>
+      <p id="modal-descripcion"></p>
+      <p id="modal-descripcion2"></p>
+      <p id="modal-descripcion3"></p>
+      <p id="modal-descripcion4"></p>
+      <p id="modal-descripcion5"></p>
+      <p id="modal-descripcion6"></p>
+      <p id="modal-descripcion7"></p>
+      <p id="modal-descripcion8"></p>
+      <p id="modal-descripcion9"></p>
+      <p id="modal-descripcion10"></p>
+     
+               
+    </div>
+  </div>
+
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.seccion').forEach(seccion => seccion.classList.remove('activa'));
+      document.getElementById(id).classList.add('activa');
+    }
+
+    function toggleDetalles(id) {
+      const detalles = document.getElementById(id);
+      detalles.style.display = detalles.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function mostrarModal(nombre, imagen, info, descripcion, descripcion2, descripcion3, descripcion4, descripcion5,descripcion6, descripcion7, descripcion8, descripcion9, descripcion10) {
+      document.getElementById('modal-nombre').textContent = nombre;
+      document.getElementById('modal-img').src = imagen;
+      document.getElementById('modal-info').textContent = info;
+      document.getElementById('modal-descripcion').textContent = descripcion;
+      document.getElementById('modal-descripcion2').textContent = descripcion2;
+      document.getElementById('modal-descripcion3').textContent = descripcion3;
+      document.getElementById('modal-descripcion4').textContent = descripcion4;
+      document.getElementById('modal-descripcion5').textContent = descripcion5;
+      document.getElementById('modal-descripcion6').textContent = descripcion6;
+      document.getElementById('modal-descripcion7').textContent = descripcion7;
+      document.getElementById('modal-descripcion8').textContent = descripcion8;
+       document.getElementById('modal-descripcion9').textContent = descripcion9;
+       document.getElementById('modal-descripcion10').textContent = descripcion10;
+
+      
+    
+      document.getElementById('modal-roster').style.display = 'block';
+    }
+
+    function cerrarModal() {
+      document.getElementById('modal-roster').style.display = 'none';
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("toggleStaffBtn");
+      const staff = document.getElementById("staffContainer");
+
+      btn.addEventListener("click", () => {
+        if (staff.style.display === "none") {
+          staff.style.display = "flex";
+          btn.textContent = "👥 Ocultar Staff";
+        } else {
+          staff.style.display = "none";
+          btn.textContent = "👥 Ver Staff";
+        }
+      });
+    });
+
+     let tipoSeleccionado = "";
+    let precioSeleccionado = 0;
+
+    function abrirCompra(tipo, precio) {
+      tipoSeleccionado = tipo;
+      precioSeleccionado = precio;
+      document.getElementById("boleto-tipo").textContent = "Boleto: " + tipo;
+      document.getElementById("boleto-precio").textContent = "Precio: $" + precio;
+      document.getElementById("modal").style.display = "block";
+    }
+
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    // Cuando se envía el formulario, llamar backend
+    document.getElementById("form-compra").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const cantidad = document.getElementById("cantidad").value;
+
+      const res = await fetch("/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tipo: tipoSeleccionado, precio: precioSeleccionado, cantidad })
+      });
+
+      const data = await res.json();
+      window.location.href = data.url; // Redirige a Stripe Checkout
+    });
+  </script>
+  <script>
+   
+  </script>
+
+</body>
+</html>
+
+
